@@ -15,6 +15,7 @@ data Day = Monday
          | Friday
          | Saturday
          | Sunday
+		 deriving Eq
 
 nextDay :: Day -> Day
 nextDay day = case day of
