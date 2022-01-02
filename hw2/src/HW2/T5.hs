@@ -46,7 +46,7 @@ instance Monad (ExceptState e s) where
   m >>= f = joinExceptState (fmap f m)
   return a = ES {runES = \s -> Success (a :# s)}
 
-data EvaluationError = DivideByZero deriving Show
+data EvaluationError = DivideByZero
 
 eval :: Expr -> ExceptState EvaluationError [Prim Double] Double
 eval (Val x) = pure x
