@@ -13,7 +13,6 @@ instance Semigroup (ListPlus a) where
 data Inclusive a b = This a
                    | That b
                    | Both a b
-                   deriving(Show)
                    
 instance (Semigroup a, Semigroup b) => Semigroup (Inclusive a b) where
   (<>) (This a) (This b)     = This ((<>) a b)
@@ -27,7 +26,6 @@ instance (Semigroup a, Semigroup b) => Semigroup (Inclusive a b) where
   (<>) (Both a b) (Both c d) = Both ((<>) a c) ((<>) b d)
 
 newtype DotString = DS String
-  deriving(Show)
 
 instance Semigroup DotString where
   (<>) (DS "") (DS str2)   = DS str2

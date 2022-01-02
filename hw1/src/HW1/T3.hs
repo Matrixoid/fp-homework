@@ -10,7 +10,6 @@ module HW1.T3
 
 data Tree a = Leaf
             | Branch Int (Tree a) a (Tree a)
-            deriving(Show, Eq)
 
 mkbranch :: Tree a -> a -> Tree a -> Tree a
 mkbranch Leaf element Leaf = Branch 1 Leaf element Leaf

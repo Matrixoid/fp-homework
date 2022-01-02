@@ -17,7 +17,6 @@ import Data.Maybe
 
 data N = Z
        | S N
-       deriving(Show)
 
 nplus :: N -> N -> N
 nplus Z b     = b
