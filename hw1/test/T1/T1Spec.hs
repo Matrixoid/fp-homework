@@ -13,16 +13,6 @@ import Test.Tasty.Hspec (testSpec)
 import GHC.Natural (Natural)
 import HW1.T1 (Day (..), afterDays, daysToParty, isWeekend, nextDay)
 
-instance Eq Day where
-    (==) Monday Monday       = True
-    (==) Tuesday Tuesday     = True
-    (==) Wednesday Wednesday = True
-    (==) Thursday Thursday   = True
-    (==) Friday Friday       = True
-    (==) Saturday Saturday   = True
-    (==) Sunday Sunday       = True
-    (==)  _ _                = False
-
 instance Enum Day where
   toEnum 0 = Monday
   toEnum 1 = Tuesday
