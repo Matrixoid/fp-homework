@@ -12,7 +12,7 @@ import Test.Tasty.Hspec (testSpec)
 
 import GHC.Natural (Natural)
 import HW1.T1 (Day (..), afterDays, daysToParty, isWeekend, nextDay)
-
+  
 instance Enum Day where
   toEnum 0 = Monday
   toEnum 1 = Tuesday
